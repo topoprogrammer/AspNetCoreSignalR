@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AspNetCoreSignalR.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using AspCoreSignalR.Helpers;
+using AspCoreSignalR.Hubs;
 
-namespace AspNetCoreSignalR
+namespace AspCoreSignalR
 {
     public class Startup
     {
@@ -19,6 +16,8 @@ namespace AspNetCoreSignalR
             services.AddMvc();
             services.AddSingleton(new Random());
             services.AddSingleton<OrderChecker>();
+            services.AddHttpContextAccessor();
+            services.AddSignalR().AddMessagePackProtocol();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,7 +28,9 @@ namespace AspNetCoreSignalR
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles();
+            app.UseFileServer();
+
+            app.UseSignalR(routes => routes.MapHub<CoffeeHub>("/coffeehub"));
             app.UseMvc();
         }
     }

@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreSignalR", "AspNetCoreSignalR\AspNetCoreSignalR.csproj", "{AB7328CF-0BCF-4EBA-ADA1-5A73DCCA9505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreSignalR", "AspNetCoreSignalR\AspNetCoreSignalR.csproj", "{AB7328CF-0BCF-4EBA-ADA1-5A73DCCA9505}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polling", "Polling", "{B99557B9-0616-4452-9136-FA304B7EF40E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreSignalRLongPolling", "AspNetCoreSignalRLongPolling\AspNetCoreSignalRLongPolling.csproj", "{7C519AB5-59F2-4993-85F7-8F144704AC31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreSignalRServerSentEvents", "AspNetCoreSignalRServerSentEvents\AspNetCoreSignalRServerSentEvents.csproj", "{D6E5E42D-84DB-4CC9-8387-BA85A0C86FC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreSignalRWebSockets", "AspNetCoreSignalRWebSockets\AspNetCoreSignalRWebSockets.csproj", "{2752D6B3-7000-4423-923E-FECF23ED2D5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrimitiveRealTimeWeb", "PrimitiveRealTimeWeb", "{161F24CD-E34F-4BCE-8398-D9F2E6CEF3AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspCoreSignalR", "AspCoreSignalR\AspCoreSignalR.csproj", "{786DBEF3-E100-4106-92B5-14750C5D86F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRConsoleClient", "SignalRConsoleClient\SignalRConsoleClient.csproj", "{F7446F30-28C7-4B67-91FB-5CFB0B5B97D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,36 @@ Global
 		{AB7328CF-0BCF-4EBA-ADA1-5A73DCCA9505}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB7328CF-0BCF-4EBA-ADA1-5A73DCCA9505}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB7328CF-0BCF-4EBA-ADA1-5A73DCCA9505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C519AB5-59F2-4993-85F7-8F144704AC31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C519AB5-59F2-4993-85F7-8F144704AC31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C519AB5-59F2-4993-85F7-8F144704AC31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C519AB5-59F2-4993-85F7-8F144704AC31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E5E42D-84DB-4CC9-8387-BA85A0C86FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E5E42D-84DB-4CC9-8387-BA85A0C86FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E5E42D-84DB-4CC9-8387-BA85A0C86FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E5E42D-84DB-4CC9-8387-BA85A0C86FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2752D6B3-7000-4423-923E-FECF23ED2D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2752D6B3-7000-4423-923E-FECF23ED2D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2752D6B3-7000-4423-923E-FECF23ED2D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2752D6B3-7000-4423-923E-FECF23ED2D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786DBEF3-E100-4106-92B5-14750C5D86F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786DBEF3-E100-4106-92B5-14750C5D86F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786DBEF3-E100-4106-92B5-14750C5D86F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786DBEF3-E100-4106-92B5-14750C5D86F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7446F30-28C7-4B67-91FB-5CFB0B5B97D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7446F30-28C7-4B67-91FB-5CFB0B5B97D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7446F30-28C7-4B67-91FB-5CFB0B5B97D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7446F30-28C7-4B67-91FB-5CFB0B5B97D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB7328CF-0BCF-4EBA-ADA1-5A73DCCA9505} = {B99557B9-0616-4452-9136-FA304B7EF40E}
+		{B99557B9-0616-4452-9136-FA304B7EF40E} = {161F24CD-E34F-4BCE-8398-D9F2E6CEF3AC}
+		{7C519AB5-59F2-4993-85F7-8F144704AC31} = {161F24CD-E34F-4BCE-8398-D9F2E6CEF3AC}
+		{D6E5E42D-84DB-4CC9-8387-BA85A0C86FC9} = {161F24CD-E34F-4BCE-8398-D9F2E6CEF3AC}
+		{2752D6B3-7000-4423-923E-FECF23ED2D5F} = {161F24CD-E34F-4BCE-8398-D9F2E6CEF3AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDA08A68-0967-4931-AE75-DFA07C928AFD}

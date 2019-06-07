@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreSignalR.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using WiredBrain.Helpers;
 
-namespace AspNetCoreSignalR
+namespace WiredBrain
 {
     public class Startup
     {
@@ -19,6 +19,7 @@ namespace AspNetCoreSignalR
             services.AddMvc();
             services.AddSingleton(new Random());
             services.AddSingleton<OrderChecker>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,6 +30,12 @@ namespace AspNetCoreSignalR
                 app.UseDeveloperExceptionPage();
             }
 
+            var webSocketOptions = new WebSocketOptions()
+            {
+                KeepAliveInterval = TimeSpan.FromSeconds(120),
+                ReceiveBufferSize = 4 * 1024
+            };
+            app.UseWebSockets(webSocketOptions);
             app.UseStaticFiles();
             app.UseMvc();
         }
